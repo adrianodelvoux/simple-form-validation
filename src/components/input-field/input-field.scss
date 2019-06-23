@@ -1,0 +1,50 @@
+@import '../../assets/colors';
+
+.field.input { 
+    input {
+        border: 0;
+        height: 30px;
+        outline: none;
+        padding: 0;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    & > span {
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        height: 2px;
+        left: 50%;
+        width: 0%;
+        border-radius: 10px;
+
+        transition: all 150ms linear;
+    }
+
+    .border-bottom {
+        left: 0%;
+        width: 100%;
+    }
+
+    input:hover ~ span {
+        @extend .border-bottom;
+        background: $default-color;
+    }
+
+    input:focus ~ span {
+        @extend .border-bottom;
+        background: $success-color;
+    }
+
+    &.error {
+        label {
+            color: $danger-color;
+        }
+
+        span {
+            @extend .border-bottom;
+            background: $danger-color;
+        }
+    }
+}

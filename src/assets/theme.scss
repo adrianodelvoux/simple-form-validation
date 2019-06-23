@@ -1,0 +1,26 @@
+input,
+button,
+textarea,
+body {
+    font-family: 'Arial';
+    font-size: 14px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 2em auto;
+}
+
+.field {
+    position: relative;
+
+    label {
+        color: #7e7e7e;
+        display: block;
+        cursor: pointer;
+    }
+
+    input[type=text] {
+        width: 100%;
+    }
+}
